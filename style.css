@@ -1,258 +1,91 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+html {
+  scroll-behavior: smooth;
 }
 
-.navbar {
+/* Sanagich */
+.countdown {
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.cd-boxes {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  background-color: lightyellow;
-  border-radius: 20px;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-              rgba(0, 0, 0, 0.12) 0px -12px 30px,
-              rgba(0, 0, 0, 0.12) 0px 4px 6px,
-              rgba(0, 0, 0, 0.17) 0px 12px 13px,
-              rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
 }
 
-.logo {
-  font-size: 1.4rem;
-  font-weight: bold;
-  color: #D8342F;
-}
-
-.nav-links {
-  display: flex;
-  gap: 20px;
-  list-style: none;
-}
-
-.nav-links a {
-  color: #F54927;
-  text-decoration: none;
-  font-size: 1rem;
-}
-
-.nav-links a:hover {
-  color: #D8A448;
-}
-
-.box {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-radius: 20px;
-  gap: 20px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  overflow: hidden;
-}
-
-.box::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSokB-AfiMLiTMXHbt7OE0pUPvPwUH1QIB5fMcDEVik9w&s=10');
-  background-size: cover;
-  background-position: center;
-  opacity: 0.50;   
-  z-index: -1;
-}
-
-.box-text {
-  max-width:75%;
-  padding:20px;
-}
-
-.tag {
-  color: #D14D4D;
-  font-size: 1.8rem;
-  font-weight: bold;
-  margin-bottom: 8px;
-}
-
-.box-text h2 {
-  font-size: 3.8rem;
-  margin: 0 0 12px;
-  color: #2B2420;
-}
-.tag-p{
-  font-size:1.80rem;
-}
-.describ {
-  color: #5c5450;
-  font-size: 1.95rem;
-}
-
-.sticker {
+.cd-box {
   background: lightyellow;
-  border-radius: 50px;
-  width: 200px;
-  height: 200px;
+  min-width: 90px;
+  padding: 15px;
+  border-radius: 16px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 15px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  margin-right:100px;
 }
 
-.emoji {
-  font-size:3.8rem;
-}
-
-.emoji-title {
-  font-size: 1.9rem;
+.cd-box span {
+  font-size: 2.2rem;
   font-weight: bold;
-  margin: 4px 0 0;
+  color: #D14D4D;
 }
 
-.slideshow-box{
- width:100%;
- background-color:lightpink;
+.cd-box small {
+  color: #5c5450;
 }
 
-.h2{
-  font-size:1.8rem;
-  text-align:center;
-  color:lightpink;
-  margin-top:20px;
-  margin-bottom:20px;
-}
-.slideshow {
-  position: relative;
-  width: 100%;
-  max-width: 700px;
-  height: 400px;
-  margin: 0 auto;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-
-.slide {
-  position: absolute;
-  inset: 0;
-  opacity: 0;
-  transition: opacity 0.6s ease-in-out;
-}
-
-.slide.active {
-  opacity: 1;
-}
-
-.slide img,
-.slide video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.slide-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.4);
-  color: white;
-  border: none;
-  font-size: 1.5rem;
-  padding: 10px 14px;
-  cursor: pointer;
-  border-radius: 50%;
-  z-index: 2;
-}
-
-.slide-btn.prev { left: 15px; }
-.slide-btn.next { right: 15px; }
-
-.dots {
-  position: absolute;
-  bottom: 15px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 8px;
-  z-index: 2;
-}
-
-.dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.6);
-  cursor: pointer;
-}
-
-.dot.active {
-  background: white;
-}
-.video-section {
+/* Ezgu fikrlari */
+.wishes {
   padding: 40px 20px;
   text-align: center;
 }
 
-.section-title {
-  font-size: 1.8rem;
-  color: #2B2420;
-  margin-bottom: 20px;
-}
-
-.video-wrapper {
-  max-width: 700px;
-  margin: 0 auto;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  aspect-ratio: 16 / 9;
-}
-
-.video-wrapper video,
-.video-wrapper iframe {
-  width: 100%;
-  height: 100%;
-  display: block;
-  border: none;
-}
-
-.thank-you-card {
+.wishes-grid {
   display: flex;
   justify-content: center;
-  padding: 20px;
+  gap: 20px;
+  flex-wrap: wrap;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
-.mini-card {
+.wish-card {
   background: lightyellow;
-  max-width: 400px;
-  padding: 20px 24px;
+  flex: 1 1 250px;
+  padding: 24px;
   border-radius: 16px;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 15px;
-  text-align: center;
-}
-
-.mini-card-text {
-  font-size: 0.95rem;
-  color: #2B2420;
   font-style: italic;
-  margin-bottom: 10px;
+  color: #2B2420;
 }
 
-.mini-card-author {
-  font-size: 0.85rem;
-  color: #D14D4D;
-  font-weight: bold;
-}
+/* Telefon uchun */
+@media (max-width: 768px) {
+  .box {
+    flex-direction: column;
+    height: auto;
+    padding: 30px 0;
+    justify-content: center;
+  }
 
-.site-footer {
-  background: #2B2420;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  margin-top: 20px;
-  font-size: 0.85rem;
+  .box-text {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .tag { font-size: 1.1rem; }
+  .tag-p { font-size: 1.3rem; }
+  .describ { font-size: 1.1rem; }
+
+  .sticker {
+    margin-right: 0;
+    width: 170px;
+    height: 170px;
+  }
+
+  .emoji { font-size: 2.5rem; }
+  .emoji-title { font-size: 1.2rem; }
+
+  .slideshow { height: 260px; }
 }
