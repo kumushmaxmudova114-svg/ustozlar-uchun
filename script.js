@@ -23,5 +23,30 @@ function goToSlide(index) {
 document.querySelector('.next').addEventListener('click', () => goToSlide(current + 1));
 document.querySelector('.prev').addEventListener('click', () => goToSlide(current - 1));
 
-
 setInterval(() => goToSlide(current + 1), 5000);
+
+
+function updateCountdown() {
+  const now = new Date();
+  const title = document.getElementById('cd-title');
+  const boxes = document.getElementById('cd-boxes');
+
+  if (now.getMonth() === 9 && now.getDate() === 1) {
+    title.textContent = "Bugun — Ustozlar va murabbiylar kuni! 🎉";
+    boxes.style.display = 'none';
+    return;
+  }
+  boxes.style.display = 'flex';
+
+  let target = new Date(now.getFullYear(), 9, 1);
+  if (now > target) target = new Date(now.getFullYear() + 1, 9, 1);
+
+  const diff = target - now;
+  document.getElementById('cd-days').textContent = Math.floor(diff / 86400000);
+  document.getElementById('cd-hours').textContent = Math.floor(diff / 3600000) % 24;
+  document.getElementById('cd-mins').textContent = Math.floor(diff / 60000) % 60;
+  document.getElementById('cd-secs').textContent = Math.floor(diff / 1000) % 60;
+}
+
+updateCountdown();
+setInterval(updateCountdown, 1000);
