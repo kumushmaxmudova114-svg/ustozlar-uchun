@@ -23,6 +23,7 @@ function goToSlide(index) {
 document.querySelector('.next').addEventListener('click', () => goToSlide(current + 1));
 document.querySelector('.prev').addEventListener('click', () => goToSlide(current - 1));
 
+
 setInterval(() => goToSlide(current + 1), 5000);
 
 
